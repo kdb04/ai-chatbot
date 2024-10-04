@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-    <script src="script.js" defer></script>
   </head>
   <body>
 
@@ -19,24 +18,7 @@
       }
     </script>
 
-    <script type="module">
-      import { GoogleGenerativeAI } from "@google/generative-ai";
-
-      const genAI =new GoogleGenerativeAI('AIzaSyAMHoxdaUg--IJ55cVdw9MQ6uwPrZO3z_c');
-
-      async function run() {
-          const model =genAI.getGenerativeModel({model:"gemini-pro"});
-          const prompt="tell me about physics."
-
-          const result = await model.generateContent(prompt);
-          const response = await result.response;
-          const text= await response.text();
-          console.log(text);
-      }
-
-      run();
-      
-  </script>
+    <script type="module"  src="script.js"> </script>
 
     <button class="chatbot-toggler">
       <span class="material-symbols-rounded">mode_comment</span>
