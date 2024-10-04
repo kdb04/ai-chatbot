@@ -1,16 +1,47 @@
 #typing-text {
-    font-size: 24px;
-    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700 ;
+    color: #1d3557; /* Dark Blue */
+    text-align: center;
+    background-color: #f1faee; /* Light background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 80%;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    border: 2px solid #457b9d; /* Accent border */
 }
+
 .cursor {
     display: inline-block;
-    width: 10px;
-    background-color: black;
-    margin-left: 2px;
+    width: 12px;
+    height: 32px;
+    background-color: #457b9d; /* Accent color */
+    margin-left: 5px;
+    border-radius: 2px;
     animation: blink 1s infinite;
 }
+
 @keyframes blink {
     50% {
         background-color: transparent;
     }
+}
+
+/* Optional: Add a typewriter effect for fancy typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#typing-text span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid #457b9d;
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
 }
