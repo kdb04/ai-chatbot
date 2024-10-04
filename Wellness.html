@@ -3,9 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wellness Page</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eaf8fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a7c85;
+            font-size: 2.8em;
+            margin: 20px 0;
+        }
+
+        h4 {
+            width: 100%;
+            text-align: center;
+            color: #284b63;
+            font-size: 2em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #b4dfe5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin-bottom: 50px;
+        }
+
+        section {
+            background-color: #ffffff;
+            width: 360px;
+            min-height: 220px;
+            border: 1px solid #b4dfe5;
+            border-radius: 15px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            color: #2d3142;
+            font-size: 1.1em;
+            line-height: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #4a7c85;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #37686e;
+        }
+
+        iframe {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        /* Button Style */
+        button {
+            background-color: #3c6e71;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #528985;
+        }
+
+        /* Guided Meditation Styling */
+        .meditation-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            background-color: #edf7f6;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .meditation-container section {
+            background-color: #d1f1f5;
+            border: 1px solid #b2e2e8;
+            color: #2a415e;
+        }
+
+        .meditation-container a {
+            background-color: #2a647d;
+            color: #fff;
+        }
+
+        .meditation-container a:hover {
+            background-color: #1e4b5c;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            section {
+                width: 90%;
+            }
+
+            h1, h4 {
+                font-size: 1.8em;
+            }
+
+            iframe {
+                height: 120px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    fdhisoaso
+
+    <h1>WELLNESS PAGE</h1>
+
+    <!-- Relaxing Audios Section -->
+    <h4>Relaxing Audios</h4>
+    <div class="container">
+        <section>
+            <p>Lofi Study Music</p>
+            <audio controls>
+                <source src="one.mp3" type="audio/ogg">
+                Your browser doesn't support audio.
+            </audio>
+        </section>
+        <section>
+            <p>Forest Beauty</p>
+            <audio controls>
+                <source src="two.mp3" type="audio/ogg">
+                Your browser doesn't support audio.
+            </audio>
+        </section>
+        <section>
+            <p>Calm Mind</p>
+            <audio controls>
+                <source src="three.mp3" type="audio/ogg">
+                Your browser doesn't support audio.
+            </audio>
+        </section>
+    </div>
+
+    <!-- Guided Meditation Section -->
+    <h4>Guided Meditation</h4>
+    <div class="meditation-container">
+        <section>
+            <p>Guided Meditation 1</p>
+            <a href="https://www.youtube.com/watch?v=ez3GgRqhNvA">10 Minute Guided Meditation</a>
+        </section>
+        <section>
+            <p>Guided Meditation 2</p>
+            <a href="https://www.youtube.com/watch?v=inpok4MKVLM">5 Minute Guided Meditation</a>
+        </section>
+        <section>
+            <p>Guided Meditation 3</p>
+            <a href="https://www.youtube.com/watch?v=ZgPHetPG4MY">10 Minute Guided Meditation</a>
+        </section>
+    </div>
+
+    <!-- Mindfulness Tips Section -->
+    <h4>Mindfulness Tips</h4>
+<div class="container">
+    <section>
+        <div class="tip-header">
+            <p class="tip-number">Tip 1</p>
+            <p class="tip-title"><b>Mindful Morning Ritual</b></p>
+        </div>
+        <p>Action: As soon as you wake up, take 3 minutes to sit in silence and breathe deeply. Set an intention for the day.<br>
+            <strong>Affirmation: "I welcome this new day with a calm mind and an open heart."</strong>
+        </p>
+    </section>
+    <section>
+        <div class="tip-header">
+            <p class="tip-number">Tip 2</p>
+            <p class="tip-title"><b>5-4-3-2-1 Grounding Technique</b></p>
+        </div>
+        <p><strong>Action:</strong>
+            <ul>
+                <li>5 things you can see</li>
+                <li>4 things you can touch</li>
+                <li>3 things you can hear</li>
+                <li>2 things you can smell</li>
+                <li>1 thing you can taste</li>
+            </ul>
+            <br>
+            <strong>Affirmation: "I am fully present in this moment, safe and grounded."</strong>
+        </p>
+    </section>
+    <section>
+        <div class="tip-header">
+            <p class="tip-number">Tip 3</p>
+            <p class="tip-title"><b>Loving-Kindness Meditation</b></p>
+        </div>
+        <p><strong>Action: Spend 5 minutes practicing loving-kindness meditation</strong>
+            <ul>
+                <li>I am worthy of love, respect, and happiness.</li>
+                <li>I am confident in my abilities and trust my intuition.</li>
+                <li>I am capable of overcoming any challenge that comes my way.</li>
+                <li>I am grateful for the blessings in my life and appreciate all that I have.</li>
+                <li>I am creating a life filled with love, joy, and abundance.</li>
+            </ul>
+            <br><strong>Affirmation: "I send love and kindness to myself and others."</strong>
+        </p>
+    </section>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        max-width: 1200px;
+        margin-bottom: 50px;
+    }
+
+    section {
+        background-color: #f7fdfc; /* Light background for tips */
+        width: 360px;
+        min-height: 220px;
+        border: 1px solid #b4dfe5;
+        border-radius: 15px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left; /* Align text to the left for a cleaner look */
+        transition: transform 0.3s ease-in-out;
+        position: relative; /* Positioning for icon */
+    }
+
+    section:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .tip-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px; /* Space below header */
+    }
+
+    .tip-number {
+        background-color: #4a7c85; /* Background color for the tip number */
+        color: #ffffff;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .tip-title {
+        flex-grow: 1;
+        text-align: left; /* Align title to the left */
+        margin-left: 10px; /* Space between number and title */
+        font-size: 1.2em; /* Slightly larger font for title */
+    }
+
+    /* General paragraph styles */
+    p {
+        color: #2d3142;
+        font-size: 1em; /* Adjusted size for better readability */
+        line-height: 1.5em; /* Adjusted line height */
+        margin-bottom: 15px;
+    }
+
+    ul {
+        margin: 10px 0; /* Space around the list */
+        padding-left: 20px; /* Indentation for the list */
+    }
+
+    strong {
+        color: #4a7c85; /* Color for strong text */
+    }
+</style>
+
+
 </body>
 </html>
