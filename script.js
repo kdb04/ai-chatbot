@@ -1,6 +1,5 @@
-import {GoogleGenerativeAI} from "@google/generative-ai";
-const genAI = new GoogleGenerativeAI('AIzaSyAMHoxdaUg--IJ55cVdw9MQ6uwPrZO3z_c');
-
+// import {GoogleGenerativeAI} from "https://esm.run/@google/generative-ai";
+// const genAI = new GoogleGenerativeAI('AIzaSyAMHoxdaUg--IJ55cVdw9MQ6uwPrZO3z_c');
 
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
