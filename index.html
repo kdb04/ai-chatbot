@@ -22,14 +22,14 @@
     <script type="module">
       import { GoogleGenerativeAI } from "@google/generative-ai";
 
-      const genAI=new GoogleGenerativeAI(API_KEY);
+      const genAI=new GoogleGenerativeAI('AIzaSyAMHoxdaUg--IJ55cVdw9MQ6uwPrZO3z_c');
       async function run() {
           const model =genAI.GoogleGenerativeMode({model:"gemini-pro"});
-          const prompt="Write a story about a magiv bcakpack."
+          const prompt="Write a story about a magiv backpack."
 
           const result = await model.generateContent(prompt);
           const response = await result.response;
-          const text=response.text();
+          const text= await response.text();
           console.log(text);
       }
 
