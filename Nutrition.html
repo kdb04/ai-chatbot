@@ -105,6 +105,8 @@
                 category = "Obese";
                 suggestion = "It's recommended to consult with a healthcare professional. Focus on a balanced diet, regular exercise, and consider seeking support for lifestyle changes.";
             }
+            
+            const chatBotresponse = getChatboxSuggestion(age, goal);
 
             document.getElementById('result').innerHTML = `
                 <h3>Your BMI: ${roundedBMI}</h3>
@@ -114,6 +116,18 @@
                 <p>${chatBotresponse}</p>
             `;
         });
+
+        function getChatboxSuggestion(age, goal){
+            let response = "";
+            if (goal === "Lose Weight"){
+                response = "To lose weight, consider a calorific deficit and incccorporate physical activity to your routine";
+            }else if (goal === "Maintain Weight"){
+                response = "To maintain your weight, focus on a balanced diet and regular exercise that fits your lifestyle";
+            }else if (goal === "Gain Weight"){
+                response = "To gain weight, increase your calorific intake and consider strength training";
+            }
+            return `Age: ${age}, years. ${response}`;
+        }
     </script>
 </body>
 </html>
