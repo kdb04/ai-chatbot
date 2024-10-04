@@ -10,10 +10,39 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      const genAI=new GoogleGenerativeAI(API_KEY);
+      async function run() {
+          const model =genAI.GoogleGenerativeMode({model:"gemini-pro"});
+          const prompt="Write a story about a magiv bcakpack."
+
+          const result = await model.generateContent(prompt);
+          const response = await result.response;
+          const text=response.text();
+          console.log(text);
+      }
+
+      run();
+      
+  </script>
+
     <button class="chatbot-toggler">
       <span class="material-symbols-rounded">mode_comment</span>
       <span class="material-symbols-outlined">close</span>
     </button>
+
+
     <div class="chatbot">
       <header>
         <h2>Chatbot</h2>
