@@ -60,10 +60,22 @@
     <div class="container">
         <h3>BMI Calculation</h3>
         <form id="bmiForm">
+            <label for="age">Age(years):</label>
+            <input type="number" id="age" required>
+
             <label for="height">Height(cm):</label>
             <input type="number" id="height" required>
+            
             <label for="weight">Weight(kg):</label>
             <input type="number" id="weight" required>
+
+            <label for="goal">Goal:</label>
+            <select id="goal" required>
+                <option value="" disabled selected>Choose your goal</option>
+                <option value="Lose Weight">Lose weight</option>
+                <option value="Maintain weight">Maintain weight</option>
+                <option value="Gain weight">Gain weight</option>
+            </select>
             <button type="submit">Calculate</button>
         </form>
         <div id="result"></div>
@@ -71,8 +83,10 @@
     <script>
         document.getElementById("bmiForm").addEventListener("submit", function(e){
             e.preventDefault();
+            const age = document.getElementById("age").value;
             const height = document.getElementById('height').value / 100;
             const weight = document.getElementById('weight').value;
+            const goal = document.getElementById("goal").value;
             const bmi = weight / (height * height);
             const roundedBMI = bmi.toFixed(1);
             
@@ -91,13 +105,15 @@
                 category = "Obese";
                 suggestion = "It's recommended to consult with a healthcare professional. Focus on a balanced diet, regular exercise, and consider seeking support for lifestyle changes.";
             }
-            
+
             document.getElementById('result').innerHTML = `
                 <h3>Your BMI: ${roundedBMI}</h3>
                 <p>Category: ${category}</p>
                 <p>Suggestion: ${suggestion}</p>
+                <h4>Chatbot Suggestion:</h4>
+                <p>${chatBotresponse}</p>
             `;
-        })
+        });
     </script>
 </body>
 </html>
