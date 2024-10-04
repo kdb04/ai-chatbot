@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nutrition details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+        }
+    </style>
 </head>
 <body>
-    hihiii
+    <div class="container">
+        <h3>BMI Calculation</h3>
+        <form id="bmiForm">
+            <label for="height">Height(cm):</label>
+            <input type="number" id="height" required>
+            <label for="weight">Weight(kg):</label>
+            <input type="number" id="weight" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById("bmiForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            const height = document.getElementById('height').value / 100;
+            const weight = document.getElementById('weight').value;
+            const bmi = weight / (height * height);
+            const roundedBMI = bmi.toFixed(1);
+            
+            let category, suggestion;
+            
+            if (bmi < 18.5) {
+                category = "Underweight";
+                suggestion = "Consider increasing your calorie intake with nutrient-dense foods. Consult a nutritionist for a balanced diet plan.";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                category = "Normal weight";
+                suggestion = "Maintain your current diet and exercise routine. Focus on a balanced diet and regular physical activity.";
+            } else if (bmi >= 25 && bmi < 30) {
+                category = "Overweight";
+                suggestion = "Try to incorporate more fruits, vegetables, and whole grains into your diet. Increase physical activity and consider portion control.";
+            } else {
+                category = "Obese";
+                suggestion = "It's recommended to consult with a healthcare professional. Focus on a balanced diet, regular exercise, and consider seeking support for lifestyle changes.";
+            }
+            
+            document.getElementById('result').innerHTML = `
+                <h3>Your BMI: ${roundedBMI}</h3>
+                <p>Category: ${category}</p>
+                <p>Suggestion: ${suggestion}</p>
+            `;
+        })
+    </script>
 </body>
 </html>
