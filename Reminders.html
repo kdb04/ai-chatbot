@@ -84,14 +84,8 @@
             const goal = document.getElementById("goal").value;
             const achievement = document.getElementById("achievement").value;
 
-            let reminderMessage = `
-                <h3>Reminder</h3>
-                <p>Phone Number: ${phoneNumber}</p>
-                <p>Task: ${task}</p>
-                <p>Goal: ${goal}</p>
-                <p>Achievement: ${achievement}>/p>
-            `
-
+    
+            alert("Hello User a reminder for "+goal +"for your task "+task+" has been set successfully " );
             let motivationMessage;
             if (achievement.toLowerCase() == "achieved"){
                 motivationMessage = "<p>You have achieved your goal: ${goal}. Keep up the good work";
