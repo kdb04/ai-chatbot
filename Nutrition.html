@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f1cece;
         }
         .container {
             max-width: 600px;
@@ -54,9 +54,19 @@
             background-color: #e7f3fe;
             border-left: 6px solid #2196F3;
         }
+        footer {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 200px;
+        }
     </style>
 </head>
 <body>
+    <div style="display: flex; justify-content: center; align-items: center; font-weight: bold;">
+        <header style="font-size: xx-large;">Nutrition</header>
+    </div>
     <div class="container">
         <h3>BMI Calculation</h3>
         <form id="bmiForm">
@@ -129,5 +139,9 @@
             return `Age: ${age}, years. ${response}`;
         }
     </script>
+      <footer>
+        <p>© Health And Wellness Guide - Stay Fit and Healthy!</p>
+     </footer>
+
 </body>
 </html>
