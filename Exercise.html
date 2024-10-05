@@ -3,9 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercise Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        #typing-text {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            color: #0073e6;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Daily Challenge Section */
+        .challenge-box {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .challenge-box button {
+            background-color: #ffffff;
+            color: #0073e6;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .challenge-box button:hover {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+            margin-top: 90px;
+        }
+    </style>
 </head>
 <body>
-    jojpdfjsp
+
+    <!-- Header with Typing Effect -->
+    <header>
+        <div id="typing-text"></div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- Exercise Routines Section -->
+        <section>
+            <!-- <h2>Exercise Routines</h2> -->
+            <div class="routine-grid">
+                <div class="card">
+                    <h3>Beginner Full Body Workout</h3>
+                    <p>Warm up with 5 minutes of jogging in place, followed by bodyweight squats, lunges, push-ups, and planks. Complete 3 rounds with rest in between.</p>
+                </div>
+                <div class="card">
+                    <h3>Intermediate Cardio Routine</h3>
+                    <p>Jump rope for 10 minutes, followed by high knees, burpees, mountain climbers, and jumping jacks. Perform 5 rounds with 1-minute breaks.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Strength Training</h3>
+                    <p>Deadlifts, squats, bench presses, and overhead presses using free weights. Aim for 4 sets of 8-12 reps at 70-80% of your 1RM.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Fitness Challenge Section -->
+        <section>
+            <h2>Daily Fitness Challenge</h2>
+            <div class="challenge-box">
+                <p id="daily-challenge">Ready for today's challenge? Click below to reveal!</p>
+                <button onclick="generateChallenge()">Show Challenge</button>
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© Health And Wellness Guide - Stay Fit and Healthy!</p>
+    </footer>
+
+    <!-- JavaScript for Typing Effect and Challenge Generation -->
+    <script>
+        // Typing effect
+        const text = "Exercise Routines!";
+        let index = 0;
+        
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100); // Adjust typing speed
+            }
+        }
+
+        // Start typing effect after page load
+        window.onload = function() {
+            typeEffect();
+        };
+
+        // Array of daily challenges
+        const challenges = [
+            "Complete 30 push-ups today.",
+            "Run or walk 5 kilometers.",
+            "Hold a plank for 2 minutes.",
+            "Do 50 jumping jacks.",
+            "Perform 3 sets of squats, 15 reps each.",
+            "Bike for 20 minutes at a moderate pace.",
+            "Do 10 burpees in a row."
+        ];
+
+        // Function to display a random daily challenge
+        function generateChallenge() {
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            document.getElementById("daily-challenge").innerHTML = randomChallenge;
+        }
+    </script>
+
 </body>
 </html>
