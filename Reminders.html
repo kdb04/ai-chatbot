@@ -67,10 +67,7 @@
             <textarea id="task" rows="4" placeholder="Enter your task" required></textarea>
 
             <label for="goal">Daily goal to be achieved</label>
-            <input type="text" id="goal" placeholder="Enter your goal description" required>
-
-            <label for="achievement">Today's Achievement</label>
-            <input type="text" id="achievement" placeholder="Enter your achievement of the day" required>
+            <input type="text" id="goal" placeholder="Enter your goal description" required> 
 
             <button type="submit">Set Reminder</button>
         </form>
@@ -82,18 +79,8 @@
             const phoneNumber = document.getElementById("phoneNumber").value;
             const task = document.getElementById("task").value;
             const goal = document.getElementById("goal").value;
-            const achievement = document.getElementById("achievement").value;
 
-    
-            alert("Hello User a reminder for "+goal +"for your task "+task+" has been set successfully " );
-            let motivationMessage;
-            if (achievement.toLowerCase() == "achieved"){
-                motivationMessage = "<p>You have achieved your goal: ${goal}. Keep up the good work";
-            }else{
-                motivationMessage = "<p>Keep striving towards your goal: ${goal}";
-            }
-            reminderMessage += motivationMessage;
-            document.getElementById("reminderList").innerHTML = reminderMessage;
+            alert("Hello User a reminder for "+goal + "for your task "+task+" has been set successfully " );
         });
     </script>
 </body>
