@@ -1,4 +1,5 @@
 import {GoogleGenerativeAI} from "@google/generative-ai";
+// API_KEY = process.env.API_KEY
 const genAI = new GoogleGenerativeAI('AIzaSyAMHoxdaUg--IJ55cVdw9MQ6uwPrZO3z_c');
 
     const chatbotToggler = document.querySelector(".chatbot-toggler");

@@ -12,10 +12,64 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-color: rgb(219, 238, 238);
+    }
+
+    .header {
+      width: 100%;
+      background-color: #02114e;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 80px;
+      right: 20px;
+      display: flex;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      margin: 0 5px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #e9ecef;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
-<body style="background-color: rgb(219, 238, 238);">
-
+<body>
   <script type="importmap">
       {
         "imports": { 
@@ -48,23 +102,24 @@
       <span id="send-btn" class="material-symbols-rounded">send</span>
     </div>
   </div>
-  <div id="typing-text" style="position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #97acff;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-        margin-left: 150px;
-        margin-top: 10px" ;></div>
-  <script src="typing_eff.js"></script>
+
+  <div class="header">
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Fit Quest : Your Health, Your Way!</h1>
+  </div>
+
+  <div class="navbar">
+    <a href="#login">Login</a>
+    <a href="#signup">Signup</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+
   <div class="container">
     <a href="Nutrition.html" style="text-decoration: none;">
       <div class="card nutrition">
         <div class="icon">🍏</div>
         <h3>Nutrition</h3>
-        <p style="color: peachpuff;">Track your diet, calories, and healthy eating habits.</p>
+        <p style="color: black; font-size: 1.02rem;">Track your diet, calories, and healthy eating habits.</p>
       </div>
     </a>
 
@@ -72,7 +127,8 @@
       <div class="card exercise">
         <div class="icon">🏋️‍♂️</div>
         <h3>Exercise</h3>
-        <p style="color: peachpuff;">Access workout routines and fitness challenges.</p>
+        <p style="color: black; font-size: 1.02rem;">Access workout routines, fitness challenges, and personalized
+          training plans.</p>
       </div>
     </a>
 
@@ -80,7 +136,7 @@
       <div class="card wellness">
         <div class="icon">🧘‍♀️</div>
         <h3>Wellness</h3>
-        <p style="color: peachpuff;">Find meditation sessions, mindfulness tips, and more.</p>
+        <p style="color: black; font-size: 1.02rem;">Find meditation sessions, mindfulness tips, and more.</p>
       </div>
     </a>
 
@@ -88,9 +144,11 @@
       <div class="card reminders">
         <div class="icon">⏰</div>
         <h3>Reminders</h3>
-        <p style="color: peachpuff;">Set reminders for your daily tasks, workouts, and self-care.</p>
+        <p style="color: black; font-size: 1.02rem;">Set reminders for your daily tasks, workouts, and self-care.</p>
       </div>
     </a>
   </div>
+
 </body>
+
 </html>
