@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up page</title>
+  <style>
+    html {
+            text-align: center;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #sp {
+            display: inline-block;
+            text-align: left;
+            width: 300px;
+            border: 2px solid black;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0; /* Reset margin to center the box */
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2196F3; /* Blue color or any color of your choice */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        blockquote {
+            font-style: italic;
+            color: #777;
+        }
+</style>
+</head>
+<body>
+
+  <form id="signuppg">
+    <section id="sp">
+      <h3>Sign-Up</h3>
+    <label for="Name"><strong>Name:</strong></label>
+    <input type="text" id="Name" name="Name" required placeholder="Name"><br>
+
+    <label for="Phone"><strong>Phone Number:</strong></label>
+    <input type="tel" id="Phone" name="Phone" required placeholder="Phone Number" required pattern="^[6-9]{1}[0-9]{9}$""><br>
+
+    <label for="Email"><strong>Email:</strong></label>
+    <input type="email" id="Email" name="Email" required placeholder="Email"><br>
+
+    <label for="Password"><strong>Password</strong></label>
+    <input type="password" id="Password" name="Password" required placeholder="Password"><br>
+
+    <label for="ConfirmP"><strong>Confirm Password</strong></label>
+    <input type="password" id="ConfirmP" name="ConfirmP" required placeholder="Confirm Password"><br>
+
+    <button type="submit">Submit</button>
+    
+  </section>
+  <blockquote>Already have an account?</blockquote><a href="login_page.html">Login</a>
+  <blockquote></blockquote><a href="index.html">Home Page</a>
+  <br><br>
+  </form>
+  <script src="script_signup.js"></script>
+  
+</body>
+</html>
