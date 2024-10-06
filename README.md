@@ -1,3 +1,13 @@
+### Usage:
+
+```bash
+npm init -y 
+npm install express@latest
+npm install mongoose 
+npm install cors
+node server_signup.js
+```
+
 # Health And Wellness Guide
 
 
